@@ -1,0 +1,92 @@
+body {
+  background: rgb(136, 203, 171);
+  background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Typeography General*/
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3em;
+  margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em) {
+  h1 {
+      font-size: 7em;
+      margin: 2em 4rem 1em;
+  }
+}
+
+p {
+  line-height: 1.6em;
+  color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+  margin: 10vh 1em 10vh;
+}
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu ul {
+  padding-left: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.navbar__menu li {
+  display: inline-block;
+}
+
+a.active__link {
+  color: orange !important;
+}
+
+.navbar__menu .menu__link {
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+  background: #333;
+  color: #fff;
+  transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+  padding: 1em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+  .landing__container {
+      max-width: 50em;
+      padding: 4em;
+  }
+}
