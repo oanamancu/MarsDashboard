@@ -39,9 +39,7 @@ const makeActive = () => {
 
 const getRoverContent = (rover) => {
     rover = rover.latest_photos;
-    const launchDate = rover[0].rover.launch_date;
-    const landDate = rover[0].rover.landing_date;
-    const status = rover[0].rover.status; 
+    const {launch_date, landing_date, status} = rover[0].rover;
     const photos = rover.map( img => ({imageSrc: img.img_src, earthDay: img.earth_date}) );
     const imgHtml = photos.map( img => `<figure>
             <figcaption>${img.earthDay}</figcaption>
@@ -49,7 +47,7 @@ const getRoverContent = (rover) => {
         <figure>`
     );
 
-    root.innerHTML = `<p>Launch date: ${launchDate} | Land date: ${landDate} | Status: ${status}</p>`;
+    root.innerHTML = `<p>Launch date: ${launch_date} | Land date: ${landing_date} | Status: ${status}</p>`;
     const container = document.createElement('div');
     container.classList.add('container');
     imgHtml.forEach(img => container.innerHTML += img);
